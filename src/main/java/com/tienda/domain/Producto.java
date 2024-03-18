@@ -6,21 +6,23 @@ import lombok.Data;
 
 @Data
 @Entity 
-@Table(name="Categoria")
+@Table(name="Producto")
 
-public class Categoria implements Serializable{  
+public class Producto implements Serializable{  
     
     private static final long serialVersionUID = 1L; //incrementar uno a uno el valor 
     
     @Id //llave primaria
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_categoria") //el nombre correcto del idCategoria en la base de datos
-    private long idCategoria;
-    
+    @Column(name="id_producto") //el nombre correcto del idProducto en la base de datos
+    private long idProducto;
     private String descripcion;
+    private String detalle;
+    private double precio;
+    private int existencias;
     private String ruta_imagen;
     private boolean activo;
 
-    public Categoria() {
+    public Producto() {
     }
 }
