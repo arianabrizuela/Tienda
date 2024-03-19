@@ -2,13 +2,11 @@ package com.tienda.service;
 
 import com.tienda.domain.Categoria;
 import java.util.List;
-//CRUD, CREATE, READ, UPDATE, DELETE
 
 public interface CategoriaService {
-    
-     // Se obtiene un listado de categorias en un List
-    public List<Categoria> getCategorias(boolean activos);
-    
+
+    public List<Categoria> getCategorias(boolean activo);
+
     // Se obtiene un Categoria, a partir del id de un categoria
     public Categoria getCategoria(Categoria categoria);
     
